@@ -1,7 +1,7 @@
-import 'package:bloc/bloc.dart';
 import 'package:fibo_grid/domain/entities/grid_cell.dart';
 import 'package:fibo_grid/domain/logic/fibonacci_logic.dart';
 import 'package:fibo_grid/domain/repositories/grid_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
