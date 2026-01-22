@@ -12,6 +12,7 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../data/repositories/grid_repository_impl.dart' as _i679;
 import '../../domain/repositories/grid_repository.dart' as _i213;
 import '../../presentation/bloc/grid_bloc.dart' as _i61;
 
@@ -22,6 +23,7 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    gh.lazySingleton<_i213.GridRepository>(() => _i679.GridRepositoryImpl());
     gh.factory<_i61.GridBloc>(() => _i61.GridBloc(gh<_i213.GridRepository>()));
     return this;
   }
