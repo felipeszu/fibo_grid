@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:fibo_grid/domain/entities/grid_cell.dart';
 
 abstract class GridRepository {
