@@ -2,12 +2,11 @@ import 'package:fibo_grid/domain/entities/grid_cell.dart';
 import 'package:fibo_grid/domain/entities/grid_update_result.dart';
 
 class FibonacciLogic {
-  static const int defaultArmLength =
-      7; 
-  
+  static const int defaultArmLength = 7;
+
   /// Checks if a list of numbers forms a Fibonacci sequence.
   /// The sequence must be at least [minLength] long.
-  bool isFibonacciSequence(List<int> numbers, {int minLength = 5}) {
+  bool isFibonacciSequence(List<int> numbers, {int minLength = 7}) {
     if (numbers.length < minLength) return false;
 
     // Check forward
@@ -21,10 +20,10 @@ class FibonacciLogic {
 
   bool _isFibo(List<int> numbers) {
     if (numbers.isEmpty) return false;
-  
-    if (numbers.length < 3) return false; 
-  
-    final fibs = _getFibonacciSequence(100); 
+
+    if (numbers.length < 3) return false;
+
+    final fibs = _getFibonacciSequence(100);
 
     // Find all indices where fibs[i] == numbers[0]
     List<int> startIndices = [];
@@ -62,7 +61,7 @@ class FibonacciLogic {
     return fibs;
   }
 
-  static const int _minSequenceLength = 5;
+  static const int _minSequenceLength = 7;
 
   /// Updates the grid by incrementing cells in a cross pattern and detecting
   /// Fibonacci sequences in all directions.
